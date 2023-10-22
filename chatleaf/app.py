@@ -22,7 +22,7 @@ import chainlit as cl
 EMBEDDING_MODEL = "thenlper/gte-base"
 OLLAMA_MODEL = "mistral-openorca"
 
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=512, chunk_overlap=20)
 
 system_template = """Use the following pieces of context to answer the users question.
 If you don't know the answer, just say that you don't know, don't try to make up an answer.
